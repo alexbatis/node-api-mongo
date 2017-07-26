@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 [Download](https://nodejs.org/en/download/) and install NodeJS (also installs [NPM](https://www.npmjs.com/)) 
 
 #### MongoDB
-[Download](https://github.com/user/repo/blob/branch/other_file.md)and install MongoDB
+[Download](https://github.com/user/repo/blob/branch/other_file.md) and install MongoDB
 * Add C:\Program Files\MongoDB\Server\{version}\bin environment variable to path
 * Create C:\data\db empty folder to house data
 
@@ -20,77 +20,51 @@ These instructions will get you a copy of the project up and running on your loc
 * Install Yeoman Generator
 
 ```
-npm install -g yo
+$ npm install -g yo
 ```
 
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+* Install Restgoose Generator
 
 ```
-Give the example
+$ npm install -g generator-restgoose
 ```
 
-And repeat
+## Install & Run
+
+Run the restgoose generator to create a scaffolded project
 
 ```
-until finished
+$ yo restgoose
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Run the app
 
 ```
-Give an example
+$ grunt server
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+## Create & Delete Schemas
+Create a schema using the restgoose generator
 
 ```
-Give an example
+$ yo restgoose:schema "article|title:String,excerpt:String,content:String,published:Boolean,created:Date"
 ```
 
-## Deployment
+Delete a schema using the restgoose generator:
 
-Add additional notes about how to deploy this on a live system
+```
+$ yo restgoose:deleteschema "article" --force
+```
 
-## Built With
+## Todo List
+The example on this repository provides GET/PUT/POST/DELETE functionality for a simple todoList.
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+[TodoList Docs](docs/todo.md)
 
 ## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+**Alex Batis**  | [GitHub](https://github.com/alexbatis) | [LinkedIn](https://www.linkedin.com/in/alexander-batis-3a202b101/)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
 
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
